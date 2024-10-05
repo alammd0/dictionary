@@ -1,12 +1,14 @@
 import React from 'react'
 import { AiOutlineSound } from "react-icons/ai";
 import { useState } from 'react';
+import "./Card.css"
 
 
 const Card = ({ wordInfo }) => {
 
     const [audioAvailable, setAudioAvailable] = useState(true);
 
+    console.log(wordInfo.partOfSpeech);
 
     let definitions = wordInfo.definitions;
     console.log(definitions);
@@ -22,8 +24,8 @@ const Card = ({ wordInfo }) => {
     }
 
     return (
-        <div>
-            <div>
+        <div className='word_container'>        
+            <div className='word_sub_container'>
                 <h1>Word : {wordInfo.name}</h1>
                 <p>Phonetic: <i>{wordInfo.phonetic}</i></p>
                 <button onClick={playSound}>
@@ -37,14 +39,14 @@ const Card = ({ wordInfo }) => {
                 <h1>Definitions:</h1>
                 {
                     wordInfo.definitions.map((definition, key) => (
-                        <p key={key}>{definition.definition}</p>
+                        <li className='def_text' key={key}>{definition.definition}</li>
                     ))
                 }
 
 
-                <button>
+                <button className='btn-card'>
                     <a href={wordInfo.sourceUrls} target="_blank" rel="noopener noreferrer">
-                        Click me for reference
+                        Click for reference
                     </a>
                 </button>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import "./FormData.css"
 
 const FormData = ({ updateValue }) => {
 
@@ -43,6 +44,7 @@ const FormData = ({ updateValue }) => {
             }
 
             const jsonData = await apiData.json();
+            
             console.log(jsonData);
 
 
@@ -78,8 +80,8 @@ const FormData = ({ updateValue }) => {
 
 
     return (
-        <div>
-            <form onSubmit={addHandler}>
+        <div className='form_container'>
+            <form onSubmit={addHandler} className='form_data'>
                 <label htmlFor='searchWord'>Pease Enter Word : </label>
 
 
@@ -91,9 +93,7 @@ const FormData = ({ updateValue }) => {
                     onChange={changeHandler}
                     id='searchWord'
                 />
-
-                &nbsp;
-                <button type='submit'>Search</button>
+                <button className='btn' type='submit'>Search</button>
             </form>
         </div>
     )

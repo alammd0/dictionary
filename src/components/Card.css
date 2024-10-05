@@ -1,0 +1,41 @@
+
+.word_container{
+    margin: 12px;
+    padding: 12px;
+}
+
+.word_sub_container h1{
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    color: rgb(2, 18, 50);
+    text-transform: capitalize;
+}
+
+.word_sub_container p{
+    font-size: 1.25rem;
+    color: rgb(25, 1, 1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.word_container button{
+    outline: none;
+    padding: 7px 14px;
+    border: 2px solid rgb(119, 108, 84);
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+
+.def_text{
+    font-size: 1.15rem;
+    line-height: 1.4;
+    color: rgb(38, 23, 23);
+}
+
+.btn-card{
+    margin-top: 16px;
+    font-size: 1.25rem;
+    color: rgb(206, 154, 255);
+    text-transform: lowercase;
+}

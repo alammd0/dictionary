@@ -1,6 +1,7 @@
 import Card from "./Card"
 import FormData from "./FormData"
 import { useState } from "react";
+import "./DicnaryApp.css"
 
 const DicnaryApp = () => {
 
@@ -63,7 +64,7 @@ const DicnaryApp = () => {
         if (resault) {
             setWordInfo(resault);
         }
-        else{
+        else {
             setWordInfo(null);
         }
 
@@ -72,14 +73,18 @@ const DicnaryApp = () => {
 
 
     return (
-        <div>
+        <div className="dic_container">
 
 
-            <div>
+            <div className="dic_headding">
                 <h1>Dictionary App </h1>
             </div>
             <div>
                 <FormData updateValue={updateValue} />
+            </div>
+
+            <div>
+                <hr class="separator separator--dots" />
             </div>
 
             <div>
